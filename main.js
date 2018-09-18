@@ -3,73 +3,66 @@
 // Create five (5) section elements, each with a class of message, and with textContent of your choosing.
 // Using appendChild(), attach each message as a child to the messages element.
 
-
-
 //PRACTICE EXCERCISE ONE
 
-// document.querySelector("#messages")
-// const messages = document.createElement('div')
+document.querySelector("#messages");
+const messages = document.createElement("div");
 
-// const box1 = document.createElement('section')
-// box1.className = "message"
-// box1.textContent = "Lebron James"
+const chatMessage1 = document.createElement("section");
+chatMessage1.className = "message";
+chatMessage1.textContent = "Lebron James";
 
-// messages.appendChild(box1)
+messages.appendChild(chatMessage1);
 
-// const box2 = document.createElement('section')
-// box2.className = "message"
-// box2.textContent = "Stephen Curry"
+const chatMessage2 = document.createElement("section");
+chatMessage2.className = "message";
+chatMessage2.textContent = "Stephen Curry";
 
-// messages.appendChild(box2)
+messages.appendChild(chatMessage2);
 
-// const box3 = document.createElement('section')
-// box3.className = "message"
-// box3.textContent = "Russell Westbrook"
+const chatMessage3 = document.createElement("section");
+chatMessage3.className = "message";
+chatMessage3.textContent = "Russell Westbrook";
 
-// messages.appendChild(box3)
+messages.appendChild(chatMessage3);
 
-// const box4 = document.createElement('section')
-// box4.className = "message"
-// box4.textContent = "Kyrie Irving"
+const chatMessage4 = document.createElement("section");
+chatMessage4.className = "message";
+chatMessage4.textContent = "Kyrie Irving";
 
-// messages.appendChild(box4)
+messages.appendChild(chatMessage4);
 
-// const box5 = document.createElement('section')
-// box5.className = "message"
-// box5.textContent = "Kevin Durant"
+const chatMessage5 = document.createElement("section");
+chatMessage5.className = "message";
+chatMessage5.textContent = "Kevin Durant";
 
-// messages.appendChild(box5)
+messages.appendChild(chatMessage5);
 
-// console.log(messages)
+// PRACTICE EXCERCISE TWO -REFACTOR EXERCISE ONE
 
+const fragmentbox = document.createDocumentFragment();
 
-// PRACTICE EXCERCISE TWO
+const textMessage1 = document.createElement("p");
+textMessage1.textContent = "Lebron James";
+fragmentbox.appendChild(textMessage1);
+document.querySelector("#messages").appendChild(fragmentbox);
 
+const textMessage2 = document.createElement("p");
+textMessage2.textContent = "Stephen Curry";
+fragmentbox.appendChild(textMessage2);
+document.querySelector("#messages > p:nth-child(1)").appendChild(fragmentbox);
 
+const textMessage3 = document.createElement("p");
+textMessage3.textContent = "Russell Westbrook";
+fragmentbox.appendChild(textMessage3);
+document.querySelector("#messages > p:nth-child(1)").appendChild(fragmentbox);
 
-const fragmentbox = document.createDocumentFragment()
+const textMessage4 = document.createElement("p");
+textMessage4.textContent = "Kyrie Irving";
+fragmentbox.appendChild(textMessage4);
+document.querySelector("#messages > p:nth-child(1)").appendChild(fragmentbox);
 
-const box1 = document.createElement('div')
-box1.textContent = "Lebron James"
-fragmentbox.appendChild(box1)
-
-
-const box2 = document.createElement('div')
-box2.textContent = "Stephen Curry"
-fragmentbox.appendChild(box2)
-
-const box3 = document.createElement('div')
-box3.textContent = "Russell Westbrook"
-fragmentbox.appendChild(box3)
-
-const box4 = document.createElement('div')
-box4.textContent = "Kyrie Irving"
-fragmentbox.appendChild(box4)
-
-const box5 = document.createElement('div')
-box5.textContent = "Kevin Durant"
-fragmentbox.appendChild(box5)
-
-document.querySelector("#messages").appendChild(fragmentbox)
-
-console.log(messages)
+const textMessage5 = document.createElement("p");
+textMessage5.textContent = "Kevin Durant";
+fragmentbox.appendChild(textMessage5);
+document.querySelector("#messages > p:nth-child(1)").appendChild(fragmentbox);
