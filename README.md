@@ -1,4 +1,5 @@
-PRACTICE CREATING ELEMENTS 
+# PRACTICE 
+## Book 2 Chapter 13: CREATING ELEMENTS 
 
 You're going to create a simple list of chat messages that you might have with one of your family members. Maybe it's that wacky aunt that you see every Christmas and Fourth of July.
 
@@ -8,11 +9,11 @@ Create five (5) section elements, each with a class of message, and with textCon
 Using appendChild(), attach each message as a child to the messages element.
 
 
-createDocumentFragment()
+## createDocumentFragment()
 What you did in the previous exercises was actually an expensive way of adding those elements to the DOM. Now, it didn't cost you any extra money, but it was expensive in terms of memory and processing power. When the DOM is written to, layout is 'invalidated', and at some point needs to be reflowed.
 
 We can use a document fragment to reduce the processing and layout cost of constant, rapid-fire DOM updates. You can add as many components to it as you like, and then add the fragment to the DOM as a one-time operation.
-
+```
 // A new "virtual" document fragment to contain components
 const fragment = document.createDocumentFragment()
 
@@ -38,7 +39,11 @@ fragment.appendChild(aurelius)
     "expensive" operation.
 */
 document.querySelector("#emperorList").appendChild(fragment)
+```
 
-
-PRACTICE DOCUMENT FRAGMENT 
+# PRACTICE DOCUMENT FRAGMENT 
 Update your code from the previous exercise to add the chat messages to the messages elements via a document fragment.
+
+# Run Program
+1. open in code editor 
+2. Launch in browser
